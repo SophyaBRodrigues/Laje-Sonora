@@ -1,11 +1,11 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+/* --- 9. CSS geral: reset, variáveis e fontes --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-  
   --concreto: #E2DFD8;
   --concreto-escuro: #CBC7BE;
   --tinta: #0F1E3D;
@@ -20,111 +20,172 @@
 body {
   background-color: var(--concreto);
   color: var(--tinta);
-  font-family: var(--fonte-texto);  
-  margin: 0;
+  font-family: var(--fonte-texto);
   font-size: 17px;
   line-height: 1.55;
 }
 
-a{
+a {
   color: inherit;
 }
 
-h1 h2 h3{
+h1, h2, h3 {
   font-family: var(--fonte-cartaz);
   font-weight: 900;
   line-height: 0.95;
 }
 
-.conteudo{
+.conteudo {
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: 32px;
 }
 
-.topo{
+
+/* --- 10. CSS do topo com flex --- */
+.topo {
   padding-block: 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo{
+.logo {
   font-family: var(--fonte-cartaz);
   font-size: 34px;
   font-weight: 900;
   text-decoration: none;
 }
 
-.menu{
+.menu {
   display: flex;
   gap: 36px;
 }
 
-.menu a{
-  text-decoration: none;
+.menu a {
   font-weight: 600;
+  text-decoration: none;
   padding-bottom: 4px;
   border-bottom: 4px solid transparent;
 }
 
-.menu a:hover{
+.menu a:hover {
   border-bottom-color: var(--tinta);
 }
 
-.menu a.atual{
+.menu a.atual {
   border-bottom-color: var(--fita);
 }
 
-.cartazes{
+
+/* --- 11. CSS dos cartazes --- */
+.cartazes {
   margin-top: 16px;
   display: flex;
   gap: 16px;
+}
+
+.cartaz {
   padding: 40px;
 }
 
-.cartaz-principal{
+.cartaz-principal {
   background-color: var(--caixa-dagua);
-  color: var(--branco); 
+  color: var(--branco);
   flex: 2;
 }
 
-.cartaz-principal h1{
+.cartaz-principal h1 {
   font-size: 132px;
-  width: 9ch;
+  max-width: 9ch;
 }
 
-.cartaz-lateral{
+.cartaz-lateral {
   background-color: var(--fita);
-  display: flex;
   flex: 1;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 32px;
+  align-items: flex-start;
 }
 
-.cartaz-lateral p{
+.cartaz-lateral p {
   font-size: 22px;
   font-weight: 600;
   line-height: 1.3;
 }
 
-.botao{
+.botao {
   background-color: var(--tinta);
   color: var(--branco);
   font-weight: 700;
   text-decoration: none;
-  padding: 16px 28px 16px 28px;
+  padding: 16px 28px;
   border: none;
   font-family: var(--fonte-texto);
   font-size: 17px;
   cursor: pointer;
 }
 
-.botao:hover{
+.botao:hover {
   background-color: var(--caixa-dagua);
 }
 
-.cartaz-lateral{
-  align-items: flex-start
+.secao{
+  margin-top: 96px;
+}
+
+.titulo-secao{
+  font-size: 64px;
+  margin-bottom: 32px;
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.card{
+  background-color: white;
+  border: 3px solid var(--tinta);
+  flex: 1 1 340px;
+}
+
+.card .foto{
+  height: 170px;
+}
+.foto {
+  background-color: var(--concreto-escuro);
+}
+
+.foto-azul {
+  background-color: var(--caixa-dagua);
+}
+
+.foto-amarela {
+  background-color: var(--fita);
+}
+
+.foto-tinta {
+  background-color: var(--tinta);
+}
+
+.card-texto {
+  padding: 24px;
+}
+
+.card-texto {
+  padding: 24px;
+}
+
+.card-info{
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid var(--concreto-escuro);
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
 }
