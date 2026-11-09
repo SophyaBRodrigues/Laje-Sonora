@@ -1,14 +1,68 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+:root {
+    --concreto: #E2DFD8;
+    --concreto-escuro: #CBC7BE;
+    --tinta: #0F1E3D;
+    --caixa-dagua: #1F5FBF;
+    --fita: #F3C623;
+    --branco: #FFFFFF;
+  
+    --fonte-cartaz: "Big Shoulders", "Arial Narrow", sans-serif;
+    --fonte-texto: "Archivo", Arial, sans-serif;
+
 .titulo-pagina {
-    font-size: 160px;
-    margin-top: 24px;
+  font-size: 160px;
+  margin-top: 24px;
 }
 
-.subtitulo-pagina{
-    font-size: 22px;
-    max-width: 640px;
-    margin-top: 16px;
+.subtitulo-pagina {
+  font-size: 22px;
+  max-width: 640px;
+  margin-top: 16px;
 }
 
-.filtros{
-    margin-top: 48px;
+.filtros {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
+
+.filtro {
+  border: 2px solid var(--tinta);
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+filtro.ativo {
+  background-color: var(--tinta);
+  color: var(--branco);
+}
+
+.lista {
+  margin-top: 40px;
+}
+
+.oficina {
+    padding-block: 32px;
+    border-top: 3px solid var(--tinta);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.oficina .foto{
+    width: 240px;
+    height: 170px;
+}
+
+.oficina-texto {
+    flex: 1;
+  }
